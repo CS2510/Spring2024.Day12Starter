@@ -1,4 +1,4 @@
-class CheckCollisionComponent extends Component{
+class CheckCollisionsComponentCircle extends Component{
   constructor(){
     super();
   }
@@ -29,5 +29,5 @@ class CheckCollisionComponent extends Component{
   }
 }
 
-window.CheckCollisionComponent = CheckCollisionComponent
-export default CheckCollisionComponent;
+window.CheckCollisionsComponentCircle = CheckCollisionsComponentCircle
+export default CheckCollisionsComponentCircle

@@ -1,12 +1,8 @@
 class Circle extends Component {
-    constructor(fill = "green", stroke = "purple", radius=50) {
+    constructor(fill = "green", stroke = "purple") {
         super()
         this.fill = fill;
         this.stroke = stroke
-        this.radius = radius
-    }
-    start(){
-        this.transform.scaleX = this.radius
     }
     draw(ctx) {
         ctx.beginPath();

@@ -4,6 +4,7 @@ import "/engine/classes/Scene.js"
 
 import "/engine/components/Circle.js"
 import "/engine/components/Point.js"
+import "/engine/components/Rectangle.js"
 import "/engine/components/Text.js"
 import "/engine/components/Transform.js"
 
