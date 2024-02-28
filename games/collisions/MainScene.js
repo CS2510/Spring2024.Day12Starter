@@ -6,6 +6,12 @@ class MainScene extends Scene {
   constructor() {
     super("white")
 
+     // A infinitely small point that will follow the mouse cursor
+     let mouseCursorGameObject = new GameObject("MouseCursorGameObject")
+     mouseCursorGameObject.addComponent(new Point())
+     mouseCursorGameObject.addComponent(new FollowMouseComponent())
+     this.gameObjects.push(mouseCursorGameObject)
+
     //A circle against which we will do collision detection.
     let collisionCircleGameObject = new GameObject("CollisionCircleGameObject")
     collisionCircleGameObject.addComponent(new Circle())
@@ -16,22 +22,10 @@ class MainScene extends Scene {
     this.gameObjects.push(collisionCircleGameObject);
 
 
-    //A rectangle against which we will do collision detection
-    let collisionRectangleGameObject = new GameObject("CollisionRectangleGameObject")
-    collisionRectangleGameObject.addComponent(new Rectangle("green", "transparent"))
-    collisionRectangleGameObject.addComponent(new CheckCollisionsComponentRectangle())
-    collisionRectangleGameObject.transform.x = 200;
-    collisionRectangleGameObject.transform.y = 200;
-    collisionRectangleGameObject.transform.scaleX = 20
-    collisionRectangleGameObject.transform.scaleY = 30;
-    this.gameObjects.push(collisionRectangleGameObject);
+    
 
 
-    // A infinitely small point that will follow the mouse cursor
-    let mouseCursorGameObject = new GameObject("MouseCursorGameObject")
-    mouseCursorGameObject.addComponent(new Point())
-    mouseCursorGameObject.addComponent(new FollowMouseComponent())
-    this.gameObjects.push(mouseCursorGameObject)
+   
   }
 
 }
